@@ -1,0 +1,241 @@
+html, body {
+     height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-image: url(../../imagenes/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav {
+
+    border-radius: 10px;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white; 
+}
+
+footer{
+    text-align: center;
+    background-color: #FE0002;
+    width: 100%;
+    color: white;
+    padding: 10px 0;
+}
+
+.pokedex-title {
+    display: block; /* Lo convierte en un bloque para usar margin auto */
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center;
+
+    margin: 20px auto; /* Centrado horizontalmente */
+    width: fit-content; /* Se ajusta al contenido */
+
+    border: 2px solid #d3d3d3; /* Borde grisáceo */
+}
+
+#pokemonName {
+    padding: 10px 15px; /* Espaciado dentro del input */
+    border: 2px solid #d3d3d3; /* Borde grisáceo */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 100%; /* Ocupa todo el ancho disponible (si está en un contenedor de ancho completo) */
+    max-width: 300px; /* Limita el ancho máximo */
+    margin-bottom: 10px; /* Espacio debajo del input */
+    outline: none; /* Quita el contorno al hacer clic */
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
+}
+
+/* Estilo cuando el input está enfocado */
+#pokemonName:focus {
+    border-color: #FE0002; /* Cambia el borde a rojo cuando el input está seleccionado */
+    box-shadow: 0 0 8px rgba(254, 0, 2, 0.5); /* Agrega una sombra sutil */
+}
+
+button {
+    background-color: #4CAF50; /* Fondo verde para los botones */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde por defecto */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+    margin-top: 10px; /* Espacio por encima del botón */
+}
+
+/* Estilo cuando el botón está en foco (seleccionado) */
+button:focus {
+    outline: none; /* Quita el contorno predeterminado */
+}
+
+/* Estilo cuando el botón se pasa el cursor por encima (hover) */
+button:hover {
+    background-color: #45a049; /* Cambia el fondo a un verde más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de "levitación" al hacer hover */
+}
+
+/* Estilo para el botón de "Pokémon Aleatorio" (puedes usar un color diferente si quieres) */
+#randomPokemonButton {
+    background-color: #2196F3; /* Fondo azul para este botón */
+}
+
+#randomPokemonButton:hover {
+    background-color: #1976D2; /* Azul más oscuro al pasar el cursor */
+}
+
+
+main {
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Mantiene el contenido centrado verticalmente si está vacío */
+}
+
+.search_pokemon {
+    display: flex;
+    justify-content: center; /* Centrar en horizontal */
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search_pokemon input {
+    text-align: center; /* Opcional: Centra el texto dentro del input */
+}
+
+/* Estilo para el grid de 2 columnas */
+#pokemonInfo {
+    display: none; /* Ocultar hasta que se busque un Pokémon */
+    margin-top: 20px;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    gap: 20px; /* Espacio entre las columnas */
+
+    padding: 20px;
+}
+
+.pokemon-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ccc; /* Borde grisáceo */
+}
+
+.pokemon-sprite {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    background-color: white;
+    border: 2px solid #ccc; /* Borde grisáceo para el sprite */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pokemon-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.pokemon-types {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para la línea evolutiva */
+.pokemon-evolutions {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.evolutions {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las evoluciones se ajusten en varias filas si es necesario */
+    gap: 10px;
+}
+
+.evolution-chain {
+    display: flex;
+    align-items: center;
+}
+
+.evolution-chain span {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.evolution-chain-arrow {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.evolution-bifurcation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.evolution-bifurcation .evolution-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.evolution-list span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

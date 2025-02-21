@@ -1,0 +1,142 @@
+html, body {
+    overflow-x: hidden; 
+    margin: 0; 
+    padding: 0;
+    width: 100vw; 
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../../fuentes/PKMN\ RBYGSC.ttf') format('truetype');
+}
+
+body{
+    background-image: url(../../imagenes/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el bocadillo dentro de la clase .hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    gap: 20px;
+}
+
+/* Contenedor del texto */
+.hero div {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    position: relative; /* Necesario para la "punta" del bocadillo */
+    width: 80%; /* Ajusta el tamaño del bocadillo */
+    max-width: 700px; /* Limitar el tamaño máximo */
+    margin: 0 auto; /* Centrar el bocadillo */
+}
+
+/* La punta del bocadillo */
+.hero div:after {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Posiciona la punta hacia abajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centra la punta */
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* Hacer la punta */
+    border-right: 15px solid transparent; /* Hacer la punta */
+    border-top: 20px solid #fff; /* Color de la punta (blanco en este caso) */
+}
+
+
+
+nav {
+
+    border-radius: 10px;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white; 
+}
+
+main{
+    text-align: center;
+}
+
+#image-index {
+    width: 10%;
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave */
+}
+
+/* Contenedor grid */
+.grid-container {
+    display: grid; /* Activa el grid */
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre los elementos */
+    padding: 20px; /* Espaciado interno del contenedor */
+}
+
+/* Enlace para redirección, quitamos el subrayado y los estilos de enlace predeterminados */
+.grid-item {
+    text-decoration: none; /* Quitar el subrayado */
+    color: inherit; /* Eliminar el color azul de enlace y heredar el color del texto */
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    transition: box-shadow 0.3s ease; /* Suaviza el efecto de la sombra */
+}
+
+/* Efecto hover para resaltar el item */
+.grid-item:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave al pasar el ratón */
+}
+
+footer{
+    text-align: center;
+    background-color: #FE0002;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}

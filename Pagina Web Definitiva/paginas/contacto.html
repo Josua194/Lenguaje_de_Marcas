@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon</title>
+        <link rel="stylesheet" href="..//estilos/estilos-contacto/estilos-contacto.css">
+    </head>
+    <body>
+        <header>
+            <h1>Pokémon</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pokedex.html">Pokédex</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-form-section">
+                <h2>¡Ponte en contacto con nosotros!</h2>
+                <p>Si tienes alguna pregunta o sugerencia, no dudes en enviarnos un mensaje.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" onclick="enviarMensaje()">Enviar mensaje</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>José Ángel Estrada Armas</p>
+        </footer>
+        <script src="../scripts/contacto-scripts/contacto.js"></script>
+    </body>
+</html>

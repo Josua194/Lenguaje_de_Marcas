@@ -1,0 +1,144 @@
+html, body {
+    overflow-x: hidden; 
+    margin: 0; 
+    padding: 0;
+    width: 100vw; 
+}
+
+body{
+    background-image: url(../../imagenes/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav {
+
+    border-radius: 10px;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white; 
+}
+
+footer{
+    text-align: center;
+    background-color: #FE0002;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.tabla-titulo {
+    font-size: 24px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrado */
+    color: black; /* Color de texto blanco */
+    background-color: white;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+.type-chart {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    max-height: 80vh; /* Ajusta el valor de 'vh' según el espacio disponible */
+}
+table {
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border: black solid;
+}
+th {
+    background-color: #444;
+    color: white;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black; /* Borde negro alrededor del texto */
+    
+}
+
+/* Estilos de colores para los tipos */
+.Vacio {background-color: white;}
+.Normal { background-color: #A8A878; }
+.Fuego { background-color: #F08030; }
+.Agua { background-color: #6890F0; }
+.Eléctrico { background-color: #F8D030; }
+.Planta { background-color: #78C850; }
+.Hielo { background-color: #98D8D8; }
+.Lucha { background-color: #C03028; }
+.Veneno { background-color: #A040A0; }
+.Tierra { background-color: #E0C068; }
+.Volador { background-color: #A890F0; }
+.Psíquico { background-color: #F85888; }
+.Bicho { background-color: #A8B820; }
+.Roca { background-color: #B8A038; }
+.Fantasma { background-color: #705898;  }
+.Dragón { background-color: #7038F8;  }
+.Siniestro { background-color: #705848;  }
+.Acero { background-color: #B8B8D0;  }
+.Hada { background-color: #EE99AC; }
+
+.eficaz {
+    background-color: #4CAF50; /* Verde */
+    color: white; /* Texto en blanco para mejor contraste */
+}
+
+/* Estilo para poco eficaz (valor 0.5) */
+.poco-eficaz {
+    background-color: #FFA500; /* Naranja */
+    color: white; /* Texto en blanco para mejor contraste */
+}
+
+/* Estilo para inmune (valor 0) */
+.inmune {
+    background-color: #FF0000; /* Rojo */
+    color: white; /* Texto en blanco para mejor contraste */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon</title>
+        <link rel="stylesheet" href="../estilos/estilos-adivina/estilos-adivina.css">
+    </head>
+    <body>
+        <header>
+            <h1>Pokémon</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pokedex.html">Pokédex</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="pokemon-search">
+                <h2>Pokémon Aleatorio</h2>
+                <p>¡Adivina el Pokémon generado aleatoriamente!</p>
+    
+                <input type="text" id="pokemon-name" placeholder="Escribe el nombre del Pokémon" />
+                <button onclick="adivinarPokemon()">Enviar</button>
+    
+                <div id="pokemonInfo" class="pokemon-info">
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>José Ángel Estrada Armas</p>
+        </footer>
+        <script src="../scripts/adivina-scripts/adivina-scripts.js"></script>
+    </body>
+</html>

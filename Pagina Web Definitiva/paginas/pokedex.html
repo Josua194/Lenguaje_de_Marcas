@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon - Pokédex</title>
+    <link rel="stylesheet" href="../estilos/estilos-pokedex/estilos-pokedex.css">
+</head>
+<body>
+    <header>
+        <h1>Pokémon</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pokedex.html">Pokédex</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2 class="pokedex-title">Pokédex</h2>
+        <div class="search_pokemon">
+            <input type="text" id="pokemonName" placeholder="Escribe el nombre de un Pokémon" title="Escribe el nombre o el número del Pokémon">
+            <button id="searchButton" onclick="clickenBoton_SearchPokemon()">Buscar</button>
+            <button id="randomPokemonButton">Pokémon Aleatorio</button>
+        </div>
+        <div id="pokemonInfo" class="pokemon-info">
+            <div class="pokemon-grid">
+                <!-- Columna 1: Información del Pokémon (sprite, nombre, tipos) -->
+                <div class="pokemon-details">
+                    <img class="pokemon-sprite" src="" alt="Sprite Pokémon">
+                    <h3 class="pokemon-name"></h3>
+                    <p class="pokemon-types"></p>
+                </div>
+                <!-- Columna 2: Evoluciones -->
+                <div class="pokemon-evolutions">
+                    <h3>Linea evolutiva:</h3>
+                    <div class="evolutions">
+                        <!-- Aquí se mostrarán las evoluciones -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+    <footer>
+        <p>José Ángel Estrada Armas</p>
+    </footer>
+
+    <script src="../scripts/pokedex-scripts/pokedex-scripts.js"></script>
+</body>
+</html>

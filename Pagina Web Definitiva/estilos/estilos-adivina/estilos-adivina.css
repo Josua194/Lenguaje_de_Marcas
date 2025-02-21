@@ -1,0 +1,140 @@
+html, body {
+    height: 100%;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+}
+
+body{
+    background-image: url(../../imagenes/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav {
+
+    border-radius: 10px;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius: 5px; 
+    transition: 0.3s; 
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white; 
+}
+
+footer {
+    text-align: center;
+    background-color: #FE0002;
+    color: white;
+    padding: 10px;
+}
+
+.pokemon-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+    background-color: bisque;
+}
+
+.pokemon-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.pokemon-table th, .pokemon-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.pokemon-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.pokemon-sprite {
+    width: 60px;
+    height: 60px;
+}
+
+.pokemon-search{
+    text-align: center;
+}
+
+
+#pokemon-name {
+    padding: 10px 15px; /* Espaciado dentro del input */
+    border: 2px solid #d3d3d3; /* Borde grisáceo */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 100%; /* Ocupa todo el ancho disponible (si está en un contenedor de ancho completo) */
+    max-width: 300px; /* Limita el ancho máximo */
+    margin-bottom: 10px; /* Espacio debajo del input */
+    outline: none; /* Quita el contorno al hacer clic */
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de color del borde */
+}
+
+/* Estilo cuando el input está enfocado */
+#pokemon-name:focus {
+    border-color: #FE0002; /* Cambia el borde a rojo cuando el input está seleccionado */
+    box-shadow: 0 0 8px rgba(254, 0, 2, 0.5); /* Agrega una sombra sutil */
+}
+
+button {
+    background-color: #4CAF50; /* Fondo verde para los botones */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde por defecto */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+    margin-top: 10px; /* Espacio por encima del botón */
+}
+
+/* Estilo cuando el botón está en foco (seleccionado) */
+button:focus {
+    outline: none; /* Quita el contorno predeterminado */
+}
+
+/* Estilo cuando el botón se pasa el cursor por encima (hover) */
+button:hover {
+    background-color: #45a049; /* Cambia el fondo a un verde más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de "levitación" al hacer hover */
+}
